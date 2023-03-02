@@ -14,7 +14,7 @@ function createAddressObject(addressObject) {
       city: addressObject.city,
       firstName: addressObject.firstName,
       lastName: addressObject.lastName,
-      email: addressObject.custom.email,
+      email: addressObject.custom.emailAddress,
       ID: Object.hasOwnProperty.call(addressObject, 'ID')
         ? addressObject.ID
         : null,
