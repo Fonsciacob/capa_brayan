@@ -174,6 +174,7 @@ function copyShippingAddressToShipment(shippingData, shipmentOrNull) {
 
     shippingAddress.setFirstName(shippingData.address.firstName);
     shippingAddress.setLastName(shippingData.address.lastName);
+    shippingAddress.custom.email(shippingData.address.email);
     shippingAddress.setAddress1(shippingData.address.address1);
     shippingAddress.setAddress2(shippingData.address.address2);
     shippingAddress.setCity(shippingData.address.city);

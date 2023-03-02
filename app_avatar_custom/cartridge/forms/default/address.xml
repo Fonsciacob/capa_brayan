@@ -7,6 +7,8 @@
            max-length="50" missing-error="address.firstname.missing" range-error="error.message.50orless"/>
     <field formid="lastName" label="label.input.lastname.profile" type="string" mandatory="true" binding="lastName" max-length="50"
            missing-error="address.lastname.missing" range-error="error.message.50orless"/>
+    <field formid="email" label="label.input.email.profile" type="string" mandatory="true" binding="email" max-length="50"
+           missing-error="error.message.required" range-error="error.message.50orless"/>
     <field formid="address1" label="label.input.address1" type="string" mandatory="true" binding="address1" max-length="50"
            missing-error="address.address1.missing" range-error="error.message.50orless"/>
     <field formid="address2" label="label.input.address2" type="string" mandatory="false" binding="address2"
