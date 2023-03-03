@@ -214,7 +214,7 @@ server.post(
 
           shippingAddress.setFirstName(address.firstName || '');
           shippingAddress.setLastName(address.lastName || '');
-          shippingAddress.custom.email = address.email || '';
+          shippingAddress.custom.emailAddress = address.email || '';
           shippingAddress.setAddress1(address.address1 || '');
           shippingAddress.setAddress2(address.address2 || '');
           shippingAddress.setCity(address.city || '');

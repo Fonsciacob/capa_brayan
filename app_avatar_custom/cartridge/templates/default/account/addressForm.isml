@@ -45,6 +45,18 @@
     </div>
 </div>
 
+<!-- Email -->
+<div class="form-group
+        ${pdict.addressForm.email.mandatory === true ? 'required' : ''}">
+    <label class="form-control-label" for="email">
+        <isprint value="${pdict.addressForm.email.label}" encoding="htmlcontent" />
+    </label>
+    <input type="text" class="form-control" id="email"
+    <isprint value="${pdict.addressForm.email.attributes}" encoding="off" />
+    autocomplete="address-line1">
+    <div class="invalid-feedback"></div>
+</div>
+
 <!-- Address 1 -->
 <div class="form-group
         ${pdict.addressForm.address1.mandatory === true ? 'required' : ''}">

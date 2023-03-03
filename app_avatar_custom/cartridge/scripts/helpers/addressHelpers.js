@@ -44,7 +44,7 @@ function updateAddressFields(newAddress, address) {
   newAddress.setCity(address.city || '');
   newAddress.setFirstName(address.firstName || '');
   newAddress.setLastName(address.lastName || '');
-  newAddress.setEmail(address.email || '');
+  newAddress.custom.emailAddress = address.email || '';
   newAddress.setPhone(address.phone || '');
   newAddress.setPostalCode(address.postalCode || '');
 

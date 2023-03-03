@@ -41,7 +41,7 @@
             <option value="${address.ID}"
                 ${address.ID === pdict.order.billing.matchingAddressId ? 'selected' : ''}
                 data-first-name="${address.firstName||''}" data-last-name="${address.lastName||''}"
-                data-email="${billingAddress.email||''}"
+                data-email="${address.email||''}"
                 data-address1="${address.address1||''}" data-address2="${address.address2||''}"
                 data-city="${address.city||''}" data-state-code="${address.stateCode||''}"
                 data-country-code="${address.countryCode.value||''}" data-postal-code="${address.postalCode||''}"

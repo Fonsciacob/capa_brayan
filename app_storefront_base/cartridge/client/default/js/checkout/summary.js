@@ -44,6 +44,7 @@ function updateOrderProductSummaryInformation(order) {
         var nameLine = address.firstName ? address.firstName + ' ' : '';
         if (address.lastName) nameLine += address.lastName;
 
+        var email = address.email;
         var address1Line = address.address1;
         var address2Line = address.address2;
 
@@ -84,6 +85,7 @@ function updateOrderProductSummaryInformation(order) {
             && shipping.shippingAddress.countryCode
             && (shipping.shippingAddress.phone || shipping.productLineItems.items[0].fromStoreId)) {
             $('.ship-to-name', tmpl).text(nameLine);
+            $('.ship-to-email', tmpl).text(email);
             $('.ship-to-address1', tmpl).text(address1Line);
             $('.ship-to-address2', tmpl).text(address2Line);
             $('.ship-to-city', tmpl).text(address.city);

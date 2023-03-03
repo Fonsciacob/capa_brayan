@@ -276,6 +276,7 @@ server.post(
             viewData.address = {
                 firstName: { value: paymentForm.addressFields.firstName.value },
                 lastName: { value: paymentForm.addressFields.lastName.value },
+                email: { value: paymentForm.addressFields.email.value},
                 address1: { value: paymentForm.addressFields.address1.value },
                 address2: { value: paymentForm.addressFields.address2.value },
                 city: { value: paymentForm.addressFields.city.value },
@@ -392,6 +393,7 @@ server.post(
                 }
 
                 billingAddress.setFirstName(billingData.address.firstName.value);
+                billingAddress.custom.emailAddress = billingData.address.email.value;
                 billingAddress.setLastName(billingData.address.lastName.value);
                 billingAddress.setAddress1(billingData.address.address1.value);
                 billingAddress.setAddress2(billingData.address.address2.value);

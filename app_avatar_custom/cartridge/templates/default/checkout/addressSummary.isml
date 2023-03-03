@@ -9,7 +9,8 @@
     </div>
 
     <div class="email">
-        <isif condition="${address && address.email}">${address.email} </isif>
+        prueba
+        <isif condition="${address && address.email}">${address.email}</isif>
     </div>
 
     <div class="address1">
