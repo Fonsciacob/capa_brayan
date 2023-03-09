@@ -116,7 +116,7 @@ function updateShippingAddressFormValues(shipping) {
     addressObject = {
       firstName: null,
       lastName: null,
-      email: null,
+      emailAddress: null,
       address1: null,
       address2: null,
       city: null,
@@ -137,7 +137,7 @@ function updateShippingAddressFormValues(shipping) {
 
     $('input[name$=_firstName]', form).val(addressObject.firstName);
     $('input[name$=_lastName]', form).val(addressObject.lastName);
-    $('input[name$=_email]', form).val(addressObject.email);
+    $('input[name$=_emailAddress]', form).val(addressObject.emailAddress);
     $('input[name$=_address1]', form).val(addressObject.address1);
     $('input[name$=_address2]', form).val(addressObject.address2);
     $('input[name$=_city]', form).val(addressObject.city);
@@ -353,7 +353,7 @@ function updatePLIShippingSummaryInformation(
   var nameLine = address.firstName ? address.firstName + ' ' : '';
   if (address.lastName) nameLine += address.lastName;
 
-  var email = address.email;
+  var emailAddress = address.emailAddress;
   var address1Line = address.address1;
   var address2Line = address.address2;
 
@@ -369,7 +369,7 @@ function updatePLIShippingSummaryInformation(
   var tmpl = $('#pli-shipping-summary-template').clone();
 
   $('.ship-to-name', tmpl).text(nameLine);
-  $('.ship-to-email', tmpl).text(email);
+  $('.ship-to-emailAddress', tmpl).text(emailAddress);
   $('.ship-to-address1', tmpl).text(address1Line);
   $('.ship-to-address2', tmpl).text(address2Line);
   $('.ship-to-city', tmpl).text(address.city);
@@ -576,7 +576,7 @@ function clearShippingForms(order) {
 
       $('input[name$=_firstName]', form).val('');
       $('input[name$=_lastName]', form).val('');
-      $('input[name$=_email]', form).val('');
+      $('input[name$=_emailAddress]', form).val('');
       $('input[name$=_address1]', form).val('');
       $('input[name$=_address2]', form).val('');
       $('input[name$=_city]', form).val('');

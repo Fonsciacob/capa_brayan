@@ -117,7 +117,7 @@ function copyCustomerAddressToShipment(address, shipmentOrNull) {
 
     shippingAddress.setFirstName(address.firstName);
     shippingAddress.setLastName(address.lastName);
-    shippingAddress.custom.emailAddress = address.email || '';
+    shippingAddress.custom.emailAddress = address.emailAddress || '';
     shippingAddress.setAddress1(address.address1);
     shippingAddress.setAddress2(address.address2);
     shippingAddress.setCity(address.city);
@@ -144,7 +144,7 @@ function copyCustomerAddressToBilling(address) {
 
     billingAddress.setFirstName(address.firstName);
     billingAddress.setLastName(address.lastName);
-    billingAddress.custom.emailAddress = address.email;
+    billingAddress.custom.emailAddress = address.emailAddress;
     billingAddress.setAddress1(address.address1);
     billingAddress.setAddress2(address.address2);
     billingAddress.setCity(address.city);
@@ -174,7 +174,7 @@ function copyShippingAddressToShipment(shippingData, shipmentOrNull) {
       shippingAddress = shipment.createShippingAddress();
     }
 
-    shippingAddress.custom.emailAddress = shippingData.address.email;
+    shippingAddress.custom.emailAddress = shippingData.address.emailAddress;
     shippingAddress.setFirstName(shippingData.address.firstName);
     shippingAddress.setLastName(shippingData.address.lastName);
     shippingAddress.setAddress1(shippingData.address.address1);
@@ -207,7 +207,8 @@ function copyBillingAddressToBasket(address, currentBasket) {
 
     billingAddress.setFirstName(address.firstName);
     billingAddress.setLastName(address.lastName);
-    billingAddress.custom.emailAddress = address.email || '';
+    /**** */
+    billingAddress.custom.emailAddress = address.custom.emailAddress;
     billingAddress.setAddress1(address.address1);
     billingAddress.setAddress2(address.address2);
     billingAddress.setCity(address.city);

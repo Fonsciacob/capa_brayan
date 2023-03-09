@@ -168,7 +168,7 @@
               : ((u = []),
                 c.firstName && u.push(c.firstName),
                 c.lastName && u.push(c.lastName),
-                c.email && u.push(c.email),
+                c.emailAddress && u.push(c.emailAddress),
                 c.address1 && u.push(c.address1),
                 c.address2 && u.push(c.address2),
                 c.city && (c.state ? u.push(c.city + ',') : u.push(c.city)),
@@ -182,7 +182,7 @@
           var h = {
             'data-first-name': 'firstName',
             'data-last-name': 'lastName',
-            'data-email': 'email',
+            'data-emailAddress': 'emailAddress',
             'data-address1': 'address1',
             'data-address2': 'address2',
             'data-city': 'city',
@@ -212,7 +212,7 @@
           return {
             firstName: $('input[name$=_firstName]', e).val(),
             lastName: $('input[name$=_lastName]', e).val(),
-            email: $('input[name$=_email]', e).val(),
+            emailAddress: $('input[name$=_emailAddress]', e).val(),
             address1: $('input[name$=_address1]', e).val(),
             address2: $('input[name$=_address2]', e).val(),
             city: $('input[name$=_city]', e).val(),
@@ -2001,7 +2001,7 @@
         (t = {
           firstName: null,
           lastName: null,
-          email: null,
+          emailAddress: null,
           address1: null,
           address2: null,
           city: null,
@@ -2018,7 +2018,7 @@
             var n = t.countryCode;
             $('input[name$=_firstName]', r).val(t.firstName),
               $('input[name$=_lastName]', r).val(t.lastName),
-              $('input[name$=_email]', r).val(t.email),
+              $('input[name$=_emailAddress]', r).val(t.emailAddress),
               $('input[name$=_address1]', r).val(t.address1),
               $('input[name$=_address2]', r).val(t.address2),
               $('input[name$=_city]', r).val(t.city),
@@ -2815,7 +2815,7 @@
               $('input[name$=_lastName]', i).val(
                 t.billingAddress.address.lastName
               ),
-              $('input[name$=_email]', i).val(t.billingAddress.address.email),
+              $('input[name$=_emailAddress]', i).val(t.billingAddress.address.emailAddress),
               $('input[name$=_address1]', i).val(
                 t.billingAddress.address.address1
               ),

@@ -9,22 +9,21 @@ function createAddressObject(addressObject) {
   var result;
   let email = '';
 
-  if(Object.hasOwnProperty.call(addressObject,'raw')){
-    email = addressObject.raw.custom.emailAddress
-  }
-
-  if(Object.hasOwnProperty.call(addressObject,'custom')){
-    email =  addressObject.custom.emailAddress;
-  }
-
   if (addressObject) {
+    if (Object.hasOwnProperty.call(addressObject, 'raw')) {
+      email = addressObject.raw.custom.emailAddress;
+    }
+    if (Object.hasOwnProperty.call(addressObject, 'custom')) {
+      email = addressObject.custom.emailAddress;
+    }
+
     result = {
       address1: addressObject.address1,
       address2: addressObject.address2,
       city: addressObject.city,
       firstName: addressObject.firstName,
       lastName: addressObject.lastName,
-      email: email,
+      emailAddress: email,
       ID: Object.hasOwnProperty.call(addressObject, 'ID')
         ? addressObject.ID
         : null,

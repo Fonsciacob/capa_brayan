@@ -112,7 +112,9 @@ function updateBillingAddress(order) {
     billing.billingAddress.address.lastName
   );
 
-  $('input[name$=_email]', form).val(billing.billingAddress.address.email);
+  $('input[name$=_emailAddress]', form).val(
+    billing.billingAddress.address.emailAddress
+  );
 
   $('input[name$=_address1]', form).val(
     billing.billingAddress.address.address1

@@ -214,7 +214,7 @@ server.post(
 
           shippingAddress.setFirstName(address.firstName || '');
           shippingAddress.setLastName(address.lastName || '');
-          shippingAddress.custom.emailAddress = address.email || '';
+          shippingAddress.custom.emailAddress = address.emailAddress || '';
           shippingAddress.setAddress1(address.address1 || '');
           shippingAddress.setAddress2(address.address2 || '');
           shippingAddress.setCity(address.city || '');
@@ -458,7 +458,7 @@ server.post(
       result.address = {
         firstName: form.shippingAddress.addressFields.firstName.value,
         lastName: form.shippingAddress.addressFields.lastName.value,
-        email: form.shippingAddress.addressFields.email.value,
+        emailAddress: form.shippingAddress.addressFields.emailAddress.value,
         address1: form.shippingAddress.addressFields.address1.value,
         address2: form.shippingAddress.addressFields.address2.value,
         city: form.shippingAddress.addressFields.city.value,

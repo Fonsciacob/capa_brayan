@@ -106,7 +106,7 @@ function ShippingModel(shipment, address, customer, containerView) {
     // Optional properties
     if (emptyAddress(shipment)) {
         this.shippingAddress = new AddressModel(shipment.shippingAddress).address;
-        if(!this.shippingAddress.email) {this.shippingAddress.email = customer.addressBook.addresses[0].custom.emailAddress};
+        //if(!this.shippingAddress.emailAddress) {this.shippingAddress.custom.emailAddress = customer.addressBook.addresses[0].custom.emailAddress};
 
     } else {
         this.shippingAddress = address;

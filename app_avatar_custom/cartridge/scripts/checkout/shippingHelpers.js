@@ -33,10 +33,11 @@ function getShippingModels(currentBasket, customer, containerView) {
  * @returns {Object} - raw JSON representing address form data
  */
 function getAddressFromRequest(req) {
+  var asd = req.form;
+  var asd = req.form.custom;
   return {
     firstName: req.form.firstName,
     lastName: req.form.lastName,
-    email: req.form.email,
     address1: req.form.address1,
     address2: req.form.address2,
     city: req.form.city,

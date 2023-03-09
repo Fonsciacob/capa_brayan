@@ -1,4 +1,5 @@
 <isset name="billingFields" value="${pdict.forms.billingForm.addressFields}" scope="page"/>
+<isset name="billingAddress" scope="page" value="${pdict.order.billing.billingAddress.address}">
 <div class="row">
     <div class="col-sm-6">
         <div class="form-group
@@ -11,7 +12,7 @@
                     ? pdict.order.billing.billingAddress.address.firstName
                     : ''}"
                 <isprint value=${billingFields.firstName.attributes} encoding="off"/>
-                autocomplete="given-name" >
+                autocomplete="given-name" />
             <div class="invalid-feedback"></div>
         </div>
     </div>
@@ -27,6 +28,23 @@
                     : ''}"
                 <isprint value=${billingFields.lastName.attributes} encoding="off"/>
                 autocomplete="family-name">
+            <div class="invalid-feedback"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group
+            ${billingFields.emailAddress.htmlName}">
+            <label class="form-control-label" for="billingEmailAddress">${Resource.msg('field.billing.address.email','address',null)}</label>
+            <input type="text" class="form-control billingEmail" id="billingEmailAddress"
+                                  value="${pdict.order.billing.billingAddress.address
+                    && pdict.order.billing.billingAddress.address.emailAddress
+                    ? pdict.order.billing.billingAddress.address.emailAddress
+                    : ''}"
+            <isprint value=${billingFields.emailAddress.attributes} encoding="off"/>
+            autocomplete="billing address-line1"/>
             <div class="invalid-feedback"></div>
         </div>
     </div>

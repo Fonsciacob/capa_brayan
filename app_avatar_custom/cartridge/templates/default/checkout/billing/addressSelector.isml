@@ -6,7 +6,7 @@
     <isif condition="${pdict.order.billing.matchingAddressId || !billingAddress}">
         <option value="new"
             data-first-name="" data-last-name=""
-            data-email=""
+            data-email-address=""
             data-address1="" data-address2=""
             data-city="" data-state-code=""
             data-country-code="" data-postal-code=""
@@ -17,7 +17,7 @@
         <option value="manual-entry"
             data-first-name="${billingAddress.firstName||''}"
             data-last-name="${billingAddress.lastName||''}"
-            data-email="${billingAddress.email||''}"
+            data-email-address="${billingAddress.emailAddress||''}"
             data-address1="${billingAddress.address1||''}"
             data-address2="${billingAddress.address2||''}"
             data-city="${billingAddress.city||''}"
@@ -27,26 +27,26 @@
             data-phone="${billingAddress.phone}">
          ${billingAddress.firstName || ''}
          ${billingAddress.lastName || ''}
-         ${billingAddress.email || ''}
+         ${billingAddress.emailAddress || ''}
          ${billingAddress.address1 || ''}
          ${billingAddress.city || ''}${!billingAddress.city || ','}
          ${billingAddress.stateCode||''}
          ${billingAddress.postalCode||''}
         </option>
     </isif>
-    <isinclude template="checkout/billing/addressSelectorShipping">
+    <isinclude template="checkout/billing/addressSelectorShipping" />
     <isif condition="${pdict.customer.addresses && pdict.customer.addresses.length > 1}">
         <option disabled>${Resource.msg('msg.account.addresses', 'checkout', null)}</option>
         <isloop items="${pdict.customer.addresses}" var="address">
             <option value="${address.ID}"
                 ${address.ID === pdict.order.billing.matchingAddressId ? 'selected' : ''}
                 data-first-name="${address.firstName||''}" data-last-name="${address.lastName||''}"
-                data-email="${address.email||''}"
+                data-email-address="${address.emailAddress||''}"
                 data-address1="${address.address1||''}" data-address2="${address.address2||''}"
                 data-city="${address.city||''}" data-state-code="${address.stateCode||''}"
                 data-country-code="${address.countryCode.value||''}" data-postal-code="${address.postalCode||''}"
                 data-phone="${address.phone||''}">
-                ${address.ID || ''} - ${address.firstName || ''} ${address.lastName || ''} ${address.email || ''} ${address.address1 || ''} ${address.city || ''}${!address.city || ','} ${address.stateCode||''} ${address.postalCode||''}
+                ${address.ID || ''} - ${address.firstName || ''} ${address.lastName || ''} ${address.emailAddress || ''} ${address.address1 || ''} ${address.city || ''}${!address.city || ','} ${address.stateCode||''} ${address.postalCode||''}
             </option>
         </isloop>
     </isif>

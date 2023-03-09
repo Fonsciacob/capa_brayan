@@ -57,8 +57,8 @@ function optionValueForAddress(shipping, selected, order, options) {
     if (shippingAddress.lastName) {
       title.push(shippingAddress.lastName);
     }
-    if (shippingAddress.email) {
-      title.push(shippingAddress.email);
+    if (shippingAddress.emailAddress) {
+      title.push(shippingAddress.emailAddress);
     }
     if (shippingAddress.address1) {
       title.push(shippingAddress.address1);
@@ -95,7 +95,7 @@ function optionValueForAddress(shipping, selected, order, options) {
   var keyMap = {
     'data-first-name': 'firstName',
     'data-last-name': 'lastName',
-    'data-email': 'email',
+    'data-email-address': 'emailAddress',
     'data-address1': 'address1',
     'data-address2': 'address2',
     'data-city': 'city',
@@ -142,7 +142,7 @@ function getAddressFieldsFromUI(form) {
   var address = {
     firstName: $('input[name$=_firstName]', form).val(),
     lastName: $('input[name$=_lastName]', form).val(),
-    email: $('input[name$=_email]', form).val(),
+    emailAddress: $('input[name$=_emailAddress]', form).val(),
     address1: $('input[name$=_address1]', form).val(),
     address2: $('input[name$=_address2]', form).val(),
     city: $('input[name$=_city]', form).val(),

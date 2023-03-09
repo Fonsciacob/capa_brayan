@@ -1,6 +1,6 @@
 <option value="new"
         data-first-name="" data-last-name=""
-        data-email=""
+        data-email-address=""
         data-address1="" data-address2=""
         data-city="" data-state-code=""
         data-country-code="" data-postal-code=""
@@ -16,7 +16,7 @@
             value="${aShippingModel.UUID}"
             ${!shippingModel.matchingAddressId && aShippingModel.UUID === shippingModel.UUID ? 'selected="selected"' : '' }
             data-first-name="${aShippingModel.shippingAddress.firstName||''}" data-last-name="${aShippingModel.shippingAddress.lastName||''}"
-            data-email="${aShippingModel.shippingAddress.email||''}"
+            data-email-address="${aShippingModel.shippingAddress.emailAddress||''}"
             data-address1="${aShippingModel.shippingAddress.address1||''}" data-address2="${aShippingModel.shippingAddress.address2||''}"
             data-city="${aShippingModel.shippingAddress.city||''}" data-state-code="${aShippingModel.shippingAddress.stateCode||''}"
             data-country-code="${aShippingModel.shippingAddress.countryCode.value||''}" data-postal-code="${aShippingModel.shippingAddress.postalCode}"
@@ -24,7 +24,7 @@
         >
         <isif condition="${aShippingModel.shippingAddress.firstName
                     && aShippingModel.shippingAddress.lastName
-                    && aShippingModel.shippingAddress.email
+                    && aShippingModel.shippingAddress.emailAddress
                     && aShippingModel.shippingAddress.address1
                     && aShippingModel.shippingAddress.city
                     && aShippingModel.shippingAddress.stateCode
@@ -32,7 +32,7 @@
         >
             ${aShippingModel.shippingAddress.firstName || ''}
             ${aShippingModel.shippingAddress.lastName || ''}
-            ${aShippingModel.shippingAddress.email || ''}
+            ${aShippingModel.shippingAddress.emailAddress || ''}
             ${aShippingModel.shippingAddress.address1 || ''}
             ${aShippingModel.shippingAddress.address2 || ''}
             ${aShippingModel.shippingAddress.city || ''}${!aShippingModel.shippingAddress.city || ','}
@@ -53,7 +53,7 @@
         <option value="${'ab_'+address.ID}"
                 ${address.ID==shippingModel.matchingAddressId ? 'selected="selected"' : '' }
         data-first-name="${address.firstName||''}" data-last-name="${address.lastName||''}"
-        data-email="${address.email||''}"
+        data-email-address="${address.emailAddress||''}"
         data-address1="${address.address1||''}" data-address2="${address.address2||''}"
         data-city="${address.city||''}" data-state-code="${address.stateCode||''}"
         data-country-code="${address.countryCode.value||''}" data-postal-code="${address.postalCode||''}"

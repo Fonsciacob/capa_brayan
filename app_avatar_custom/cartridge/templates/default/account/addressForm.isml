@@ -47,12 +47,12 @@
 
 <!-- Email -->
 <div class="form-group
-        ${pdict.addressForm.email.mandatory === true ? 'required' : ''}">
-    <label class="form-control-label" for="email">
-        <isprint value="${pdict.addressForm.email.label}" encoding="htmlcontent" />
+        ${pdict.addressForm.emailAddress.mandatory === true ? 'required' : ''}">
+    <label class="form-control-label" for="emailAddress">
+        <isprint value="${pdict.addressForm.emailAddress.label}" encoding="htmlcontent" />
     </label>
-    <input type="text" class="form-control" id="email"
-    <isprint value="${pdict.addressForm.email.attributes}" encoding="off" />
+    <input type="text" class="form-control" id="emailAddress"
+    <isprint value="${pdict.addressForm.emailAddress.attributes}" encoding="off" />
     autocomplete="address-line1">
     <div class="invalid-feedback"></div>
 </div>

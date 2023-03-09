@@ -44,7 +44,7 @@ function updateAddressFields(newAddress, address) {
   newAddress.setCity(address.city || '');
   newAddress.setFirstName(address.firstName || '');
   newAddress.setLastName(address.lastName || '');
-  newAddress.custom.emailAddress = address.email || '';
+  newAddress.custom.emailAddress = address.emailAddress || '';
   newAddress.setPhone(address.phone || '');
   newAddress.setPostalCode(address.postalCode || '');
 
@@ -95,7 +95,7 @@ function copyShippingAddress(address) {
     city: address.city,
     firstName: address.firstName,
     lastName: address.lastName,
-    email: address.email,
+    emailAddress: address.custom.emailAddress,
     phone: address.phone,
     postalCode: address.postalCode,
     states: {

@@ -7,6 +7,7 @@
                 <isset name="address" value="${shippingModel.shippingAddress}" scope="page"/>
             <iselse>
                 <isset name="address" value="${{}}" scope="page"/>
+            </iselse>
             </isif>
             <div class="summary-details shipping">
                 <isinclude template="checkout/addressSummary" />

@@ -11,14 +11,34 @@
             </attribute-definition>
         </custom-attribute-definitions>
     </type-extension>
+
+    <type-extension type-id="Profile">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="first_purchase">
+                <display-name xml:lang="x-default">First Purchase</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
     <type-extension type-id="CustomerAddress">
         <custom-attribute-definitions>
             <attribute-definition attribute-id="emailAddress">
-                <display-name xml:lang="x-default">Email</display-name>
+                <display-name xml:lang="x-default">Email Address</display-name>
                 <type>string</type>
                 <mandatory-flag>false</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>
                 <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="first_purchase">
+                <display-name xml:lang="x-default">First Purchase</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
             </attribute-definition>
         </custom-attribute-definitions>
     </type-extension>

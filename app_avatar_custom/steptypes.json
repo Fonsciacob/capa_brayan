@@ -1,0 +1,28 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.firstPurchase",
+                "@supports-parallel-execution": "true",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "module": "app_avatar_custom/cartridge/scripts/steps/firstPurchase.js",
+                "function": "execute",
+                "transactional": "false",
+                "parameters": {
+                    "parameter": [ ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "OK"
+                        },
+                        {
+                            "@code": "ERROR"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

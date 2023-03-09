@@ -118,7 +118,7 @@ function getAddressObject(address) {
       },
       firstName: address.firstName,
       lastName: address.lastName,
-      email: address.email,
+      emailAddress: address.custom.emailAddress,
       ID: address.ID,
       phone: address.phone,
       postalCode: address.postalCode,
